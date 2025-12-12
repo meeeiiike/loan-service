@@ -1,9 +1,11 @@
 package ie.atu.loan_service.service;
 
+import ie.atu.loan_service.client.NotificationClient;
 import ie.atu.loan_service.errorHandling.DuplicateExceptionHandling;
 import ie.atu.loan_service.errorHandling.NotFoundException;
 import ie.atu.loan_service.client.UserClient;
 import ie.atu.loan_service.model.Loan;
+import ie.atu.loan_service.model.NotificationDTO;
 import ie.atu.loan_service.model.UserDTO;
 import ie.atu.loan_service.repository.LoanRepository;
 import org.springframework.stereotype.Service;
@@ -16,9 +18,12 @@ public class LoanService {
 
     private final UserClient userClient;
     private final LoanRepository loanRepository;
-    public LoanService(UserClient userClient, LoanRepository loanRepository) {
+    private final NotificationClient notificationClient;
+
+    public LoanService(UserClient userClient, LoanRepository loanRepository, NotificationClient notificationClient) {
         this.userClient = userClient;
         this.loanRepository = loanRepository;
+        this.notificationClient = notificationClient;
     }
 
     // Defensive Copy of Loan List
@@ -44,6 +49,7 @@ public class LoanService {
         loan.setLoanDate(LocalDate.now());
         loan.setDueDate(LocalDate.now().plusWeeks(1));
         loan.setReminderDate(LocalDate.now().plusWeeks(1).minusDays(1));
+        notificationClient.sendNotification(new NotificationDTO(loan.getUserId(), "Loan Created"));
         return loanRepository.save(loan);
     }
 
