@@ -49,7 +49,7 @@ public class LoanService {
         loan.setLoanDate(LocalDate.now());
         loan.setDueDate(LocalDate.now().plusWeeks(1));
         loan.setReminderDate(LocalDate.now().plusWeeks(1).minusDays(1));
-        notificationClient.sendNotification(new NotificationDTO(loan.getUserId(), "Loan Created"));
+        notificationClient.sendNotification(new NotificationDTO(loan.getUserId(), "Loan Created!", user.getEmail(), loan.getDueDate()));
         return loanRepository.save(loan);
     }
 

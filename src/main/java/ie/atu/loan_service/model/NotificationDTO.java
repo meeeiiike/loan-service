@@ -4,8 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data @AllArgsConstructor @NoArgsConstructor
 public class NotificationDTO {
-    private String userID;
-    private String message;
+    private String userId;
+    private String notification;
+    private String email;
+    //private String bookTitle;
+    private LocalDate dueDate;
+    //private String type;
 }
