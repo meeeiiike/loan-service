@@ -1,4 +1,4 @@
-package ie.atu.loan_service.DTO;
+package ie.atu.loan_service.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
