@@ -2,7 +2,7 @@ package ie.atu.loan_service.controller;
 
 import ie.atu.loan_service.client.UserClient;
 import ie.atu.loan_service.model.Loan;
-import ie.atu.loan_service.model.UserDTO;
+import ie.atu.loan_service.dto.UserDTO;
 import ie.atu.loan_service.service.LoanService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

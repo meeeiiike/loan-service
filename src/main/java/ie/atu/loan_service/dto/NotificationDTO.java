@@ -1,5 +1,4 @@
-package ie.atu.loan_service.model;
-import jakarta.validation.constraints.NotBlank;
+package ie.atu.loan_service.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
