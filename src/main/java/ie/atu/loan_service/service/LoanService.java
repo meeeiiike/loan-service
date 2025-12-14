@@ -5,8 +5,8 @@ import ie.atu.loan_service.errorHandling.DuplicateExceptionHandling;
 import ie.atu.loan_service.errorHandling.NotFoundException;
 import ie.atu.loan_service.client.UserClient;
 import ie.atu.loan_service.model.Loan;
-import ie.atu.loan_service.model.NotificationDTO;
-import ie.atu.loan_service.model.UserDTO;
+import ie.atu.loan_service.DTO.NotificationDTO;
+import ie.atu.loan_service.DTO.UserDTO;
 import ie.atu.loan_service.repository.LoanRepository;
 import org.springframework.stereotype.Service;
 

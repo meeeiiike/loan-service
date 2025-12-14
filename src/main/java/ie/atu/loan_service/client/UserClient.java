@@ -1,6 +1,6 @@
 package ie.atu.loan_service.client;
 
-import ie.atu.loan_service.model.UserDTO;
+import ie.atu.loan_service.DTO.UserDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

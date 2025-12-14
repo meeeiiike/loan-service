@@ -1,6 +1,6 @@
 package ie.atu.loan_service.client;
 
-import ie.atu.loan_service.model.NotificationDTO;
+import ie.atu.loan_service.DTO.NotificationDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
