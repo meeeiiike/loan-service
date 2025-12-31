@@ -56,4 +56,9 @@ public class LoanController {
                 .body(loanCreated);
     }
 
+    @PutMapping("/{loanId}")
+    public ResponseEntity<Loan> update(@PathVariable String loanId, @Valid @RequestBody Loan loan){
+        return ResponseEntity.ok(loanService.updateLoan(loan, loanId));
+    }
+
 }

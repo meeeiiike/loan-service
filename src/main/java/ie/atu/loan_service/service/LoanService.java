@@ -54,6 +54,11 @@ public class LoanService {
     }
 
     // Add Update
+    public Loan updateLoan(Loan loan, String loanId){
+        Loan updating = loanRepository.findByLoanId(loanId).orElseThrow(() -> new NotFoundException(loan.getLoanId() + " doesn't exist"));
+        updating.setDueDate(loan.getDueDate());
+        return loanRepository.save(updating);
+    }
 
     // Add Delete
 }
