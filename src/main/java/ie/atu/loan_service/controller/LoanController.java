@@ -61,4 +61,8 @@ public class LoanController {
         return ResponseEntity.ok(loanService.updateLoan(loan, loanId));
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteLoan(@PathVariable String id){
+        loanService.deleteLoan(id);
+    }
 }
