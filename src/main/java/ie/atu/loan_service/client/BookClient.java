@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 //@FeignClient(
-        //name="users-service",
-        //url="http://localhost:8080/api/user"
+        //name="book-service",
+        //url="http://localhost:8081/book"
 //)
 
 @FeignClient(
@@ -16,6 +16,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 )
 
 public interface BookClient {
-    @GetMapping("/book/{id}")
-    BookDTO getBookById(@PathVariable("id") long bookId);
+    @GetMapping("/{id}")
+    BookDTO getBookById(@PathVariable("id") Long bookID);
 }

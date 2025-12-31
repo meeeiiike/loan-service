@@ -2,6 +2,7 @@ package ie.atu.loan_service.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,8 +20,8 @@ public class Loan {
     private String loanId;
     @NotBlank
     private String userId;
-    @NotBlank
-    private String bookId;
+    @NotNull
+    private Long bookId;
     private LocalDate loanDate;
     private LocalDate dueDate;
     private LocalDate reminderDate;
